@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CISA KEV to STIX 2.1</title>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--line:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#58a6ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 -apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:980px;margin:0 auto;padding:40px 20px 60px}
+h1{font-size:2rem;margin:0 0 4px} h2{font-size:1.15rem;margin:36px 0 12px}
+p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.card b{display:block;font-size:1.8rem;color:var(--accent)}
+.card span{color:var(--muted);font-size:.85rem}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);font-size:.9rem}
+th{color:var(--muted);font-weight:600} tr:last-child td{border-bottom:none}
+.bar{display:grid;grid-template-columns:180px 1fr 44px;gap:10px;align-items:center;margin:6px 0;font-size:.9rem}
+.bar div{background:var(--card);border-radius:4px;height:10px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent)}
+.bar b{text-align:right;color:var(--muted)} code{color:#79c0ff}
+footer{margin-top:40px;font-size:.8rem;color:var(--muted)}
+</style>
+</head>
+<body><main>
+<h1>CISA KEV &rarr; STIX 2.1</h1>
+<p>Generated 2026-11-05T03:08:00+00:00 from catalog <strong>2026.11.04</strong>
+(released 2026-11-04T20:00:05.774Z). Every object below comes from the published CISA feed.</p>
+<div class="cards">
+<div class="card"><b>1768</b><span>KEV entries</span></div>
+<div class="card"><b>3538</b><span>STIX objects</span></div>
+<div class="card"><b>361</b><span>known ransomware use</span></div>
+<div class="card"><b>97</b><span>forensic triage</span></div>
+</div>
+<h2>Objects by type</h2>
+<table><tr><th>Type</th><th>Count</th></tr>
+<tr><td><code>identity</code></td><td>1</td></tr><tr><td><code>note</code></td><td>1768</td></tr><tr><td><code>report</code></td><td>1</td></tr><tr><td><code>vulnerability</code></td><td>1768</td></tr>
+</table>
+<h2>Most affected vendors</h2>
+<div class="bar"><span>Microsoft</span><div><i style="width:100.0%"></i></div><b>390</b></div>
+<div class="bar"><span>Cisco</span><div><i style="width:26.2%"></i></div><b>102</b></div>
+<div class="bar"><span>Apple</span><div><i style="width:24.6%"></i></div><b>96</b></div>
+<div class="bar"><span>Adobe</span><div><i style="width:21.3%"></i></div><b>83</b></div>
+<div class="bar"><span>Google</span><div><i style="width:19.5%"></i></div><b>76</b></div>
+<div class="bar"><span>Oracle</span><div><i style="width:11.8%"></i></div><b>46</b></div>
+<div class="bar"><span>Apache</span><div><i style="width:10.5%"></i></div><b>41</b></div>
+<div class="bar"><span>Ivanti</span><div><i style="width:9.7%"></i></div><b>38</b></div>
+<div class="bar"><span>Linux</span><div><i style="width:8.2%"></i></div><b>32</b></div>
+<div class="bar"><span>Fortinet</span><div><i style="width:8.2%"></i></div><b>32</b></div>
+<div class="bar"><span>Citrix</span><div><i style="width:6.9%"></i></div><b>27</b></div>
+<div class="bar"><span>D-Link</span><div><i style="width:6.7%"></i></div><b>26</b></div>
+<div class="bar"><span>VMware</span><div><i style="width:6.7%"></i></div><b>26</b></div>
+<div class="bar"><span>SonicWall</span><div><i style="width:4.9%"></i></div><b>19</b></div>
+<div class="bar"><span>Synacor</span><div><i style="width:4.9%"></i></div><b>19</b></div>
+<h2>Top CWEs</h2>
+<table><tr><th>CWE</th><th>Entries</th></tr><tr><td><code>none listed</code></td><td>175</td></tr>
+<tr><td><code>CWE-20</code></td><td>119</td></tr>
+<tr><td><code>CWE-78</code></td><td>113</td></tr>
+<tr><td><code>CWE-787</code></td><td>106</td></tr>
+<tr><td><code>CWE-416</code></td><td>95</td></tr>
+<tr><td><code>CWE-119</code></td><td>88</td></tr>
+<tr><td><code>CWE-22</code></td><td>82</td></tr>
+<tr><td><code>CWE-94</code></td><td>72</td></tr>
+<tr><td><code>CWE-502</code></td><td>71</td></tr>
+<tr><td><code>CWE-287</code></td><td>49</td></tr>
+<tr><td><code>CWE-306</code></td><td>43</td></tr>
+<tr><td><code>CWE-843</code></td><td>38</td></tr>
+<tr><td><code>CWE-284</code></td><td>37</td></tr>
+<tr><td><code>CWE-89</code></td><td>33</td></tr>
+<tr><td><code>CWE-77</code></td><td>33</td></tr></table>
+<h2>Entries added per year</h2>
+<table><tr><th>Year</th><th>Entries</th></tr><tr><td>2021</td><td>311</td></tr>
+<tr><td>2022</td><td>555</td></tr>
+<tr><td>2023</td><td>187</td></tr>
+<tr><td>2024</td><td>186</td></tr>
+<tr><td>2025</td><td>245</td></tr>
+<tr><td>2026</td><td>284</td></tr></table>
+<h2>20 most recent additions</h2>
+<table><tr><th>CVE</th><th>Vendor</th><th>Product</th><th>Added</th><th>Ransomware</th></tr><tr><td><code>CVE-2024-27834</code></td><td>Apple</td><td>Multiple Products</td><td>2026-11-04</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-119977</code></td><td>WordPress</td><td>WordPress Core</td><td>2026-11-03</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-118527</code></td><td>Ivanti</td><td>Connect Secure</td><td>2026-10-30</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-111357</code></td><td>Ivanti</td><td>Connect Secure</td><td>2026-10-30</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-97229</code></td><td>GitLab</td><td>Community Edition and Enterprise Edition</td><td>2026-10-29</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-76418</code></td><td>Cisco</td><td>Secure Firewall ASA Software and Cisco Secure FTD Software</td><td>2026-10-29</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-41709</code></td><td>Broadcom</td><td>VMware ESX</td><td>2026-10-28</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-46300</code></td><td>Linux</td><td>Kernel</td><td>2026-10-28</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-48356</code></td><td>Adobe</td><td>Commerce and Magento</td><td>2026-10-27</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-111497</code></td><td>Google</td><td>Brotli</td><td>2026-10-27</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-109618</code></td><td>PHP Group</td><td>PHP</td><td>2026-10-26</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-109619</code></td><td>PHP Group</td><td>PHP</td><td>2026-10-26</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-114625</code></td><td>Arista</td><td>VeloCloud Orchestrator</td><td>2026-10-23</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-110447</code></td><td>Collabora</td><td>Collabora Online – Built-in CODE Server</td><td>2026-10-23</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-106931</code></td><td>EG Secure Solutions</td><td>SiteGuard Server Edition</td><td>2026-10-20</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-96656</code></td><td>Plex</td><td>Media Server</td><td>2026-10-20</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-96655</code></td><td>Plex</td><td>Media Server</td><td>2026-10-20</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-96654</code></td><td>Plex</td><td>Media Server</td><td>2026-10-20</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-96652</code></td><td>Plex</td><td>Media Server</td><td>2026-10-20</td><td>Unknown</td></tr>
+<tr><td><code>CVE-2026-110936</code></td><td>Siemens</td><td>Software Center</td><td>2026-10-20</td><td>Unknown</td></tr></table>
+<footer>Source: CISA Known Exploited Vulnerabilities catalog. US Government work, public domain (17 U.S.C. 105). Source: https://www.cisa.gov/known-exploited-vulnerabilities-catalog<br>
+Bundle and validation output: <code>data/kev.stix.json</code>, <code>results/validation.txt</code> in the repository.</footer>
+</main></body></html>

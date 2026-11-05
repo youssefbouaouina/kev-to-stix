@@ -1,0 +1,50 @@
+{
+  "title": "CISA Catalog of Known Exploited Vulnerabilities",
+  "catalogVersion": "2026.11.04",
+  "dateReleased": "2026-11-04T20:00:05.774Z",
+  "count": 3,
+  "vulnerabilities": [
+    {
+      "cveID": "CVE-2024-0001",
+      "vendorProject": "Acme",
+      "product": "Gateway",
+      "vulnerabilityName": "Acme Gateway Authentication Bypass",
+      "dateAdded": "2026-11-04",
+      "shortDescription": "An authentication bypass allows remote attackers to log in.",
+      "requiredAction": "Apply the vendor update.",
+      "dueDate": "2026-11-18",
+      "knownRansomwareCampaignUse": "Known",
+      "forensicTriage": "Yes",
+      "notes": "https://example.invalid/advisory",
+      "cwes": ["CWE-287"]
+    },
+    {
+      "cveID": "CVE-2023-0002",
+      "vendorProject": "Globex",
+      "product": "Portal",
+      "vulnerabilityName": "Globex Portal Command Injection",
+      "dateAdded": "2026-10-01",
+      "shortDescription": "Command injection in the upload handler.",
+      "requiredAction": "Apply mitigations.",
+      "dueDate": "2026-10-22",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "No",
+      "notes": "https://example.invalid/globex",
+      "cwes": ["CWE-78", "CWE-20"]
+    },
+    {
+      "cveID": "CVE-2022-0003",
+      "vendorProject": "Initech",
+      "product": "Printer",
+      "vulnerabilityName": "Initech Printer Path Traversal",
+      "dateAdded": "2025-12-15",
+      "shortDescription": "Path traversal in the web console.",
+      "requiredAction": "Remove the device from the network if no update exists.",
+      "dueDate": "2026-01-05",
+      "knownRansomwareCampaignUse": "Unknown",
+      "forensicTriage": "No",
+      "notes": "",
+      "cwes": []
+    }
+  ]
+}

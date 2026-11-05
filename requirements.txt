@@ -1,0 +1,4 @@
+stix2==3.0.1
+stix2-validator==3.2.0
+pytest==8.3.4
+ruff==0.8.4

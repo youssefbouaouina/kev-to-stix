@@ -1,0 +1,79 @@
+name: KEV to STIX
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # CISA updates the catalog during the US working day; 05:15 UTC is after it.
+    - cron: "15 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Lint and unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: pip install -r requirements.txt
+      - run: ruff check .
+      - run: python -m pytest -q
+
+  build:
+    name: Fetch, convert, validate, publish
+    runs-on: ubuntu-latest
+    needs: test
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: pip install -r requirements.txt
+
+      - name: Run the pipeline against the live CISA feed
+        run: python pipeline.py
+
+      - name: Show measured counts
+        run: |
+          python - <<'PY'
+          import json
+          summary = json.load(open("data/summary.json"))
+          print(f"catalog: {summary['catalog_version']}")
+          print(f"entries: {summary['entries']}")
+          print(f"stix objects: {summary['objects']} {summary['objects_by_type']}")
+          print(f"known ransomware: {summary['ransomware'].get('Known', 0)}")
+          print(f"forensic triage: {summary['forensic_triage'].get('Yes', 0)}")
+          PY
+
+      - name: Upload the generated bundle and summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: kev-stix-${{ github.run_number }}
+          path: |
+            data/summary.json
+            data/kev.stix.json
+            results/validation.txt
+            docs/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deployment
+        uses: actions/deploy-pages@v4
