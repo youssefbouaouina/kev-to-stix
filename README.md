@@ -1,5 +1,9 @@
 # kev-to-stix
 
+[![Pipeline](https://github.com/youssefbouaouina/kev-to-stix/actions/workflows/pipeline.yml/badge.svg)](https://github.com/youssefbouaouina/kev-to-stix/actions/workflows/pipeline.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![STIX 2.1](https://img.shields.io/badge/STIX-2.1-blue)](https://docs.oasis-open.org/cti/stix/v2.1/)
+
 Daily conversion of the **CISA Known Exploited Vulnerabilities** catalog into a validated
 **STIX 2.1** bundle, with a static dashboard. The mapping is fixed and tested; the validator's
 real output is committed next to the bundle.
